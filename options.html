@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Settings</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy & Fingerprint Protection</h1>
+        <p>Select a protection mode or customize settings. Changes are saved automatically.</p>
+        
+        <div class="modes">
+            <label><input type="radio" name="mode" value="light"> Light</label>
+            <label><input type="radio" name="mode" value="standard"> Standard</label>
+            <label><input type="radio" name="mode" value="heavy"> Heavy</label>
+            <label><input type="radio" name="mode" value="extreme"> Extreme</label>
+            <label><input type="radio" name="mode" value="custom"> Custom</label>
+        </div>
+
+        <div id="custom-settings" class="custom-settings-grid">
+            <!-- Toggles are dynamically inserted here -->
+        </div>
+
+        <h2>Domain Whitelist</h2>
+        <p>The extension will be disabled on these sites. Enter one domain per line (e.g., example.com).</p>
+        <textarea id="whitelist" rows="8" placeholder="google.com
+your-bank.com"></textarea>
+        <button id="save-whitelist">Save Whitelist</button>
+
+        <div id="status"></div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
